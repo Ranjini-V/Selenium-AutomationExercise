@@ -66,14 +66,9 @@ public class StandaloneProject {
 		driver.findElement(By.xpath("//input[@data-qa='card-number']")).sendKeys("3823762-204-20298");
 		driver.findElement(By.xpath("//input[@name='cvc']")).sendKeys("321");
 		driver.findElement(By.xpath("//input[@name='expiry_month']")).sendKeys("08");
-		driver.findElement(By.xpath("//input[@name='expiry_year']")).sendKeys("2028");
+		driver.findElement(By.xpath("//input[@name='expiry_year']")).sendKeys("2028");                                                                                          
 		driver.findElement(By.xpath("//button[text()='Pay and Confirm Order']")).click();
-		
-
-		
-
-		
-		
+				
 
 	}
 

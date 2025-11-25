@@ -17,6 +17,8 @@
 		<selenium-version>4.35.0</selenium-version>
 		<testng.version>7.11.0</testng.version>
 		<webdrivermanager-version>6.3.2</webdrivermanager-version>
+		<cucumber-java-version>7.32.0</cucumber-java-version>
+		<cucumber-testng-version>7.32.0</cucumber-testng-version>
 	</properties>
 
 
@@ -43,6 +45,21 @@
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>${webdrivermanager-version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber-java-version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>${cucumber-testng-version}
+			</version>
 		</dependency>
 
 	</dependencies>
