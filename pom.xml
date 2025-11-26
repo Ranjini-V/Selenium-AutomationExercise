@@ -17,8 +17,10 @@
 		<selenium-version>4.35.0</selenium-version>
 		<testng.version>7.11.0</testng.version>
 		<webdrivermanager-version>6.3.2</webdrivermanager-version>
-		<cucumber-java-version>7.32.0</cucumber-java-version>
+		<cucumber-java-version>7.14.0</cucumber-java-version>
 		<cucumber-testng-version>7.32.0</cucumber-testng-version>
+		<cucumber-junit-version>7.14.0</cucumber-junit-version>
+		<junit-version>4.13.2</junit-version>
 	</properties>
 
 
@@ -60,6 +62,21 @@
 			<artifactId>cucumber-testng</artifactId>
 			<version>${cucumber-testng-version}
 			</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumber-junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
 		</dependency>
 
 	</dependencies>
