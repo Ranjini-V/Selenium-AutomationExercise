@@ -7,10 +7,12 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"steps"},
-        plugin = {"pretty"},
-        monochrome = true
+        glue = {"stepDefinitions"},
+        plugin = {"pretty", "html:target/HTMLReports"},
+        monochrome = true,
+        tags = "@smoketest"
 )
-public class TestRunner {
+public class LoginRunner {
+	
 
 }
