@@ -33,6 +33,28 @@ public class LoginPage {
 	@FindBy(xpath = "//p[contains(text(),'Your email or password is incorrect!')]")
 	WebElement invalidLogin_msg;
 	
+	@FindBy(xpath = "//a[contains(text(),'Logged in as')]")
+	WebElement loggedInUserText;
+	
+	
+	// Action Methods
+	public void enterEmail(String email) {
+		email_input.clear();
+		email_input.sendKeys(email);
+	}
+	
+	public void enterPassword(String password) {
+		password_input.clear();
+		password_input.sendKeys(password);
+	}
+	
+	public void clickLoginBtn() {
+		login_btn.click();
+	}
+	
+	// Verification methods
+	
+	
 	
 	
 
