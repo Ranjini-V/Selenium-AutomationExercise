@@ -27,6 +27,13 @@ public class LoginPage {
 	@FindBy(xpath = "//div[@class='login-form']//input[@type='password']")
 	WebElement password_input;
 	
+	@FindBy(xpath = "//button[text()='Login']")
+	WebElement login_btn;
+	
+	@FindBy(xpath = "//p[contains(text(),'Your email or password is incorrect!')]")
+	WebElement invalidLogin_msg;
+	
+	
 	
 
 }
