@@ -14,6 +14,7 @@ public class Hooks {
 	public void setUp() {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+
 	}
 
 	@After
@@ -22,4 +23,5 @@ public class Hooks {
 			driver.quit();
 		}
 	}
+
 }

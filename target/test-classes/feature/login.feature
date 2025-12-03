@@ -14,6 +14,6 @@ Scenario: Login with invalid credentials
 @Positive
   Scenario: Login with valid credentials
     Given user navigates to login page
-    When user enters email "correctemail@example.com" and password "correctpassword"
+    When user enters email "rv@example.com" and password "1234"
     And clicks on Login button
     Then user should be logged in successfully

@@ -15,7 +15,7 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void navigateTO() {
+	public void navigateTo() {
 		driver.get(PAGE_URL);
 	}
 
