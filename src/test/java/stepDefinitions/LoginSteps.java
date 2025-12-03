@@ -13,7 +13,7 @@ import pageObjects.LoginPage;
 
 public class LoginSteps {
 
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver;
 	LoginPage loginPage;
 
 	@Given("user navigates to login page")
