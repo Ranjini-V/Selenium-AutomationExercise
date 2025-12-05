@@ -1,3 +1,4 @@
+@smoketest
 Feature: Login functionality
 
 Background: User is on home page
@@ -17,3 +18,5 @@ Scenario: Login with invalid credentials
     When user enters email "rv@example.com" and password "1234"
     And clicks on Login button
     Then user should be logged in successfully
+    
+    
