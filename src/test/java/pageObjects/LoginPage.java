@@ -36,7 +36,7 @@ public class LoginPage {
 	@FindBy(xpath = "//button[text()='Login']")
 	WebElement login_btn;
 
-	@FindBy(xpath = "//p[contains(text(),'Your email or password is incorrect!')]")
+	@FindBy(xpath = "//p[contains(text(),'Yours email or password is incorrect!')]")
 	WebElement invalidLogin_msg;
 
 	@FindBy(xpath = "//a[contains(text(),'Logged in as')]")

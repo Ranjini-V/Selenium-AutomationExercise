@@ -1,22 +1,18 @@
 @smoketest
 Feature: Login functionality
 
-Background: User is on home page
+  Background: User is on home page
 
-
-@Negative
-Scenario: Login with invalid credentials
+  @Negative
+  Scenario: Login with invalid credentials
     Given user navigates to login page
-    When user enters email "wrong@test.com" and password "wrong123"
+    When user enters email "wrongEmail" and password "wrongPassword"
     And clicks on Login button
     Then error message should be displayed
-    
- 
-@Positive
+
+  @Positive
   Scenario: Login with valid credentials
     Given user navigates to login page
-    When user enters email "rv@example.com" and password "1234"
+    When user enters email "validEmail" and password "validPassword"
     And clicks on Login button
     Then user should be logged in successfully
-    
-    

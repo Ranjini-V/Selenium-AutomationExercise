@@ -10,6 +10,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.LoginPage;
+import utilities.ConfigReader;
 
 public class LoginSteps {
 
@@ -21,19 +22,18 @@ public class LoginSteps {
 		driver = Hooks.driver;
 		loginPage = new LoginPage(driver);
 		loginPage.navigateTo();
-
+ 
 	}
 
 	@When("user enters email {string} and password {string}")
 	public void user_enters_email_and_password(String email, String password) {
-		loginPage.enterEmail(email);
-		loginPage.enterPassword(password);
+		loginPage.enterEmail(ConfigReader.getProperty(email));
+		loginPage.enterPassword(ConfigReader.getProperty(password));
 	}
 
 	@And("clicks on Login button")
 	public void clicks_on_login_button() {
 		loginPage.clickLoginBtn();
-
 	}
 
 	@Then("error message should be displayed")
