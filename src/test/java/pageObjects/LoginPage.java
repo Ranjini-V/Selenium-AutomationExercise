@@ -29,7 +29,7 @@ public class LoginPage extends BasePage {
 	@FindBy(xpath = "//img[@alt=\"Website for automation practice\"]")
 	WebElement logo;
 
-	@FindBy(xpath = "//div[@class='login-form']//input[@type='email']")
+	@FindBy(xpath = "//form[@action='/login']//input[@type='email']")
 	WebElement email_input;
 
 	@FindBy(xpath = "//div[@class='login-form']//input[@type='password']")
@@ -38,7 +38,7 @@ public class LoginPage extends BasePage {
 	@FindBy(xpath = "//button[text()='Login']")
 	WebElement login_btn;
 
-	@FindBy(xpath = "//p[contains(text(),'Yours email or password is incorrect!')]")
+	@FindBy(xpath = "//p[contains(text(),'Your email or password is incorrect!')]")
 	WebElement invalidLogin_msg;
 
 	@FindBy(xpath = "//a[contains(text(),'Logged in as')]")

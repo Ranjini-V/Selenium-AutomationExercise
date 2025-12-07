@@ -13,10 +13,7 @@ import pageObjects.BasePage;
 import pageObjects.LoginPage;
 import utilities.ConfigReader;
 
-
-
 public class LoginSteps {
-
 
 	WebDriver driver;
 	LoginPage loginPage;
@@ -26,7 +23,7 @@ public class LoginSteps {
 		driver = Hooks.driver;
 		loginPage = new LoginPage(driver);
 		loginPage.navigateTo();
- 
+
 	}
 
 	@When("user enters email {string} and password {string}")

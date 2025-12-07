@@ -14,8 +14,8 @@ public class BasePage {
 	private WebDriverWait wait;
 
 	public BasePage(WebDriver driver) {
-	
-		this.driver = new ChromeDriver();
+
+		this.driver = driver;
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	}
