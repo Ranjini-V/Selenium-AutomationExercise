@@ -26,6 +26,8 @@ public class LoginPage extends BasePage {
 	}
 
 	// Locators using PageFactory
+	@FindBy(xpath = "//img[@alt=\"Website for automation practice\"]")
+	WebElement logo;
 
 	@FindBy(xpath = "//div[@class='login-form']//input[@type='email']")
 	WebElement email_input;
@@ -43,6 +45,10 @@ public class LoginPage extends BasePage {
 	WebElement loggedInUserText;
 
 	// Action Methods
+	
+	public boolean logoPresent() {
+		return isDisplayed(logo);
+	}
 	public void enterEmail(String email) {
 		type(email_input, email);
 	}
