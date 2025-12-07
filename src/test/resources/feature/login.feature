@@ -6,7 +6,7 @@ Feature: Login functionality
   @Negative
   Scenario: Login with invalid credentials
     Given user navigates to login page
-    When user enters email "wrongEmail" and password "wrongPassword"
+    When user enters email "invalidEmail" and password "wrongPassword"
     And clicks on Login button
     Then error message should be displayed
 

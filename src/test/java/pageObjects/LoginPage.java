@@ -9,16 +9,16 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage {
+import utilities.ConfigReader;
 
-	WebDriver driver;
-	WebDriverWait wait;
-	private static final String PAGE_URL = "https://automationexercise.com/login";
+public class LoginPage extends BasePage {
+
+
+	public static String PAGE_URL = ConfigReader.getProperty("baseUrl");
 
 	public LoginPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
 	public void navigateTo() {
@@ -44,37 +44,25 @@ public class LoginPage {
 
 	// Action Methods
 	public void enterEmail(String email) {
-		email_input.clear();
-		email_input.sendKeys(email);
+		type(email_input, email);
 	}
 
 	public void enterPassword(String password) {
-		password_input.clear();
-		password_input.sendKeys(password);
+		type(password_input, password);
 	}
 
 	public void clickLoginBtn() {
-		login_btn.click();
+		click(login_btn);
 	}
 
 	// Verification methods
 	public boolean isLoginSuccessful() {
-		try {
-			wait.until(ExpectedConditions.visibilityOf(loggedInUserText));
-			return loggedInUserText.isDisplayed();
-		} catch (Exception e) {
-			return false;
-		}
+		return isDisplayed(loggedInUserText);
 
 	}
 
 	public boolean isLoginErrorDisplayed() {
-		try {
-			wait.until(ExpectedConditions.visibilityOf(invalidLogin_msg));
-			return invalidLogin_msg.isDisplayed();
-		} catch (Exception e) {
-			return false;
-		}
-	}
+		return isDisplayed(invalidLogin_msg);
 
+	}
 }
