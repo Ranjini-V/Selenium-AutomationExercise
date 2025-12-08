@@ -2,6 +2,7 @@ package pageObjects;
 
 import java.time.Duration;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,10 +11,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.ConfigReader;
+import utilities.LoggerHelper;
 
 public class LoginPage extends BasePage {
 
-
+private static final Logger log = LoggerHelper.getLogger(LoginPage.class);
+	
 	public static String PAGE_URL = ConfigReader.getProperty("baseUrl");
 
 	public LoginPage(WebDriver driver) {
@@ -22,6 +25,7 @@ public class LoginPage extends BasePage {
 	}
 
 	public void navigateTo() {
+		log.info("Navigating to Login Page: " + PAGE_URL);
 		driver.get(PAGE_URL);
 	}
 
