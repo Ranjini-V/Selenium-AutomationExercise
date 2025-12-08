@@ -1,19 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="87.797" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="Login functionality" name="Login with invalid credentials" time="23.121">
+<testsuite name="Cucumber" time="230.373" tests="2" skipped="0" failures="2" errors="0">
+<testcase classname="Login functionality" name="Login with invalid credentials" time="149.185">
+<failure type="org.openqa.selenium.NoSuchSessionException" message="invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=142.0.7444.176)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5b2e71be1df5d9dbd6cb50c3087d021f, get {url=https://automationexercise.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49491}, goog:processID: 16116, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49491/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5b2e71be1df5d9dbd6cb50c3087d021f">
+<![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=142.0.7444.176)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5b2e71be1df5d9dbd6cb50c3087d021f, get {url=https://automationexercise.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49491}, goog:processID: 16116, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49491/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5b2e71be1df5d9dbd6cb50c3087d021f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at pageObjects.LoginPage.navigateTo(LoginPage.java:29)
+	at stepDefinitions.LoginSteps.user_navigates_to_login_page(LoginSteps.java:25)
+	at ✽.user navigates to login page(file:///C:/Users/HP/eclipse-workspace/Selenium%20-%20Framework%20Project/SeleniumFrameworkDesign/src/test/resources/feature/login.feature:8)
+]]>
+</failure>
 <system-out><![CDATA[
-Given user navigates to login page..........................................passed
-When user enters email "invalidEmail" and password "wrongPassword"..........passed
-And clicks on Login button..................................................passed
-Then error message should be displayed......................................passed
+Given user navigates to login page..........................................failed
+When user enters email "invalidEmail" and password "wrongPassword"..........skipped
+And clicks on Login button..................................................skipped
+Then error message should be displayed......................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Login functionality" name="Login with valid credentials" time="63.989">
+<testcase classname="Login functionality" name="Login with valid credentials" time="79.002">
+<failure type="java.lang.AssertionError" message="Expected success message but not found!">
+<![CDATA[java.lang.AssertionError: Expected success message but not found!
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at stepDefinitions.LoginSteps.user_should_be_logged_in_successfully(LoginSteps.java:48)
+	at ✽.user should be logged in successfully(file:///C:/Users/HP/eclipse-workspace/Selenium%20-%20Framework%20Project/SeleniumFrameworkDesign/src/test/resources/feature/login.feature:18)
+]]>
+</failure>
 <system-out><![CDATA[
 Given user navigates to login page..........................................passed
 When user enters email "validEmail" and password "validPassword"............passed
 And clicks on Login button..................................................passed
-Then user should be logged in successfully..................................passed
+Then user should be logged in successfully..................................failed
 ]]></system-out>
 </testcase>
 </testsuite>
