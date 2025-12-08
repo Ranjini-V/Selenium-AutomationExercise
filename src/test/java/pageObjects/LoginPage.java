@@ -15,8 +15,8 @@ import utilities.LoggerHelper;
 
 public class LoginPage extends BasePage {
 
-private static final Logger log = LoggerHelper.getLogger(LoginPage.class);
-	
+	private static final Logger log = LoggerHelper.getLogger(LoginPage.class);
+
 	public static String PAGE_URL = ConfigReader.getProperty("baseUrl");
 
 	public LoginPage(WebDriver driver) {
@@ -49,19 +49,23 @@ private static final Logger log = LoggerHelper.getLogger(LoginPage.class);
 	WebElement loggedInUserText;
 
 	// Action Methods
-	
+
 	public boolean logoPresent() {
 		return isDisplayed(logo);
 	}
+
 	public void enterEmail(String email) {
+		log.info("Entering email: " + email_input);
 		type(email_input, email);
 	}
 
 	public void enterPassword(String password) {
+		log.info("Entering password: " + password_input);
 		type(password_input, password);
 	}
 
 	public void clickLoginBtn() {
+		log.info("Clicking Login button");
 		click(login_btn);
 	}
 

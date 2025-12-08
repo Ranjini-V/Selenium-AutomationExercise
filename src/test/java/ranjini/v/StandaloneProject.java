@@ -46,7 +46,8 @@ public class StandaloneProject {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-	//	js.executeScript("arguments[0].scrollIntoView(true);", "//a[@href='/product_details/1']");
+		// js.executeScript("arguments[0].scrollIntoView(true);",
+		// "//a[@href='/product_details/1']");
 		driver.findElement(By.xpath("//a[@href='/product_details/1']")).click();
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -58,17 +59,17 @@ public class StandaloneProject {
 		driver.findElement(By.xpath("//u[text()='View Cart']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath("//a[text()='Proceed To Checkout']")).click();
-		//button[text()='Pay and Confirm Order']//button[text()='Pay and Confirm Order']
+		// button[text()='Pay and Confirm Order']//button[text()='Pay and Confirm
+		// Order']
 		js.executeScript("arguments[0].scrollIntoView(true);", "//a[text()='Place Order']");
 		driver.findElement(By.xpath("//a[text()='Place Order']")).click();
-		
+
 		driver.findElement(By.xpath("//input[@data-qa='name-on-card']")).sendKeys("Robert");
 		driver.findElement(By.xpath("//input[@data-qa='card-number']")).sendKeys("3823762-204-20298");
 		driver.findElement(By.xpath("//input[@name='cvc']")).sendKeys("321");
 		driver.findElement(By.xpath("//input[@name='expiry_month']")).sendKeys("08");
-		driver.findElement(By.xpath("//input[@name='expiry_year']")).sendKeys("2028");                                                                                          
+		driver.findElement(By.xpath("//input[@name='expiry_year']")).sendKeys("2028");
 		driver.findElement(By.xpath("//button[text()='Pay and Confirm Order']")).click();
-				
 
 	}
 

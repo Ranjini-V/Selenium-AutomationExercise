@@ -13,7 +13,7 @@ import pageObjects.BasePage;
 public class Hooks {
 
 	public static WebDriver driver;
-	
+
 	@Before
 	public void setUp() {
 		driver = new ChromeDriver();
