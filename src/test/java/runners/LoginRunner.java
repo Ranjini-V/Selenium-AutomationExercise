@@ -5,7 +5,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/feature", glue = { "stepDefinitions", "hooks" }, plugin = { "pretty",
+@CucumberOptions(features = "src/test/resources/featurefilterProducts.feature", glue = { "stepDefinitions", "hooks" }, plugin = { "pretty",
 		"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 		"html:target/HTMLReports/report.html",
 		"json:target/JSONReports/report.json",
