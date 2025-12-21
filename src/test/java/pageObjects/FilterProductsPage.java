@@ -31,7 +31,28 @@ public class FilterProductsPage extends BasePage {
 	@FindBy (xpath = "//div[@class='productinfo text-center']//*[normalize-space()='Winter Top']")
 	WebElement winterTop ;
 	
+	@FindBy (xpath = "//a[@data-product-id='5' and contains(@class,'add-to-cart')]")
+	WebElement addToCart;
 	
+	@FindBy (xpath = "//div[@id='cartModal']//a[@href='/view_cart']/u")
+	WebElement viewCart;
+	
+	
+	// Action Methods
+	public void selectCategory() {
+		log.info("Selecting Main Category");
+		scrollWindow(womenCategory);
+		womenCategory.click();
+	}
+	
+	public void selectSubCategory() {
+		log.info("Selection sub-category");
+		topSubCategory.click();
+	}
+	
+	public void visibleProducts() {
+		 isDisplayed(winterTop);
+	}
 	
 
 }

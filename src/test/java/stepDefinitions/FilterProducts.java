@@ -11,10 +11,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.BasePage;
-import pageObjects.LoginPage;
+import pageObjects.FilterProductsPage;
 import utilities.ConfigReader;
 
 public class FilterProducts {
+	
+	FilterProductsPage filterProductsPage;
+	
 
 	@Given("user is on the home page")
 	public void user_is_on_the_home_page() {
@@ -24,14 +27,12 @@ public class FilterProducts {
 
 	@When("user selects {string} category")
 	public void user_selects_category(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		filterProductsPage.selectCategory();
 	}
 
 	@When("user selects {string} subcategory")
 	public void user_selects_subcategory(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
 	}
 
 	@Then("women's tops products should be displayed")

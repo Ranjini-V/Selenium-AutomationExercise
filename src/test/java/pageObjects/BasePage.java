@@ -2,9 +2,11 @@ package pageObjects;
 
 import java.time.Duration;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -41,6 +43,16 @@ public class BasePage {
 	protected String getText(WebElement element) {
 		wait.until(ExpectedConditions.visibilityOfAllElements(element));
 		return element.getText();
+	}
+
+	protected void scrollWindow(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	protected void hover(WebElement element) {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
 	}
 
 }
