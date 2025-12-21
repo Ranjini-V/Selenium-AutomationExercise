@@ -16,28 +16,29 @@ import utilities.ConfigReader;
 
 public class FilterProducts {
 	
+	WebDriver driver;
 	FilterProductsPage filterProductsPage;
 	
 
 	@Given("user is on the home page")
 	public void user_is_on_the_home_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    driver = Hooks.driver;
+	    filterProductsPage = new FilterProductsPage(driver);
+	    
 	}
 
 	@When("user selects {string} category")
-	public void user_selects_category(String string) {
-		filterProductsPage.selectCategory();
+	public void user_selects_category(String category) {
+		filterProductsPage.selectCategory(category);
 	}
 
 	@When("user selects {string} subcategory")
 	public void user_selects_subcategory(String string) {
-	    
+		filterProductsPage.selectSubCategory();
 	}
 
 	@Then("women's tops products should be displayed")
 	public void women_s_tops_products_should_be_displayed() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		Assert.assertTrue(filterProductsPage.visibleProducts());
 	}
 }

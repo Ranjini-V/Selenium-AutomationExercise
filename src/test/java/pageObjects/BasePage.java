@@ -52,7 +52,7 @@ public class BasePage {
 
 	protected void hover(WebElement element) {
 		Actions actions = new Actions(driver);
-		actions.moveToElement(element);
+		actions.moveToElement(element).perform();
 	}
 
 }

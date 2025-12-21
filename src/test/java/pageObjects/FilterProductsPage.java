@@ -17,42 +17,42 @@ public class FilterProductsPage extends BasePage {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
-	
-	JavascriptExecutor js = (JavascriptExecutor)driver;
 
 	// Locators with Pagefactory
-	
+
 	@FindBy(xpath = "//a[@data-toggle='collapse' and @href='#Women']")
 	WebElement womenCategory;
 
 	@FindBy(xpath = "//a[normalize-space()='Tops']")
 	WebElement topSubCategory;
-	
-	@FindBy (xpath = "//div[@class='productinfo text-center']//*[normalize-space()='Winter Top']")
-	WebElement winterTop ;
-	
-	@FindBy (xpath = "//a[@data-product-id='5' and contains(@class,'add-to-cart')]")
+
+	@FindBy(xpath = "//div[@class='productinfo text-center']//*[normalize-space()='Winter Top']")
+	WebElement winterTop;
+
+	@FindBy(xpath = "//a[@data-product-id='5' and contains(@class,'add-to-cart')]")
 	WebElement addToCart;
-	
-	@FindBy (xpath = "//div[@id='cartModal']//a[@href='/view_cart']/u")
+
+	@FindBy(xpath = "//div[@id='cartModal']//a[@href='/view_cart']/u")
 	WebElement viewCart;
-	
-	
+
 	// Action Methods
-	public void selectCategory() {
-		log.info("Selecting Main Category");
-		scrollWindow(womenCategory);
-		womenCategory.click();
+	public void selectCategory(String category) {
+		log.info("Selecting Main Category" + category);
+		if (category.equalsIgnoreCase("Women")) {
+			scrollWindow(womenCategory);
+			womenCategory.click();
+		} else {
+			throw new RuntimeException("Category not supported: " + category);
+		}
 	}
-	
+
 	public void selectSubCategory() {
 		log.info("Selection sub-category");
 		topSubCategory.click();
 	}
-	
-	public void visibleProducts() {
-		 isDisplayed(winterTop);
+
+	public boolean visibleProducts() {
+		return isDisplayed(winterTop);
 	}
-	
 
 }
