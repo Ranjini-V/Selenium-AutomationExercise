@@ -64,3 +64,8 @@
 2025-12-22 22:07:57 INFO  [LoginPage] Clicking Login button
 2025-12-22 22:08:07 INFO  [FilterProductsPage] Selecting Main CategoryWomen
 2025-12-22 22:08:08 INFO  [FilterProductsPage] Selection sub-category
+2025-12-23 20:43:01 INFO  [a_LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-23 20:50:45 INFO  [a_LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-23 20:50:49 INFO  [a_LoginPage] Entering email: [[ChromeDriver: chrome on windows (59667b4b5ba5221ba24bfefd6b3325be)] -> xpath: //form[@action='/login']//input[@type='email']]
+2025-12-23 20:50:50 INFO  [a_LoginPage] Entering password: [[ChromeDriver: chrome on windows (59667b4b5ba5221ba24bfefd6b3325be)] -> xpath: //div[@class='login-form']//input[@type='password']]
+2025-12-23 20:50:50 INFO  [a_LoginPage] Clicking Login button
