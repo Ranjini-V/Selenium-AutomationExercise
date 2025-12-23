@@ -13,13 +13,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.ConfigReader;
 import utilities.LoggerHelper;
 
-public class LoginPage extends BasePage {
+public class a_LoginPage extends BasePage {
 
-	private static final Logger log = LoggerHelper.getLogger(LoginPage.class);
+	private static final Logger log = LoggerHelper.getLogger(a_LoginPage.class);
 
 	public static String PAGE_URL = ConfigReader.getProperty("baseUrl");
 
-	public LoginPage(WebDriver driver) {
+	public a_LoginPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}

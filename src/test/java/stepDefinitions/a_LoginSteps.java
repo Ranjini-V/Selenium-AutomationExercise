@@ -10,18 +10,18 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.BasePage;
-import pageObjects.LoginPage;
+import pageObjects.a_LoginPage;
 import utilities.ConfigReader;
 
-public class LoginSteps {
+public class a_LoginSteps {
 
 	WebDriver driver;
-	LoginPage loginPage;
+	a_LoginPage loginPage;
 
 	@Given("user navigates to login page")
 	public void user_navigates_to_login_page() {
 		driver = Hooks.driver;
-		loginPage = new LoginPage(driver);
+		loginPage = new a_LoginPage(driver);
 		loginPage.navigateTo();
 
 	}

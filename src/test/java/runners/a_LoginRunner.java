@@ -10,6 +10,6 @@ import io.cucumber.junit.CucumberOptions;
 		"html:target/HTMLReports/report.html",
 		"json:target/JSONReports/report.json",
 		"junit:target/XMLReports/reports.xml" }, monochrome = true, tags = "@smoketest")
-public class LoginRunner {
+public class a_LoginRunner {
 
 }

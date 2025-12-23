@@ -46,3 +46,21 @@
 2025-12-21 21:49:21 INFO  [LoginPage] Clicking Login button
 2025-12-21 21:49:21 INFO  [FilterProductsPage] Selecting Main CategoryWomen
 2025-12-21 21:49:29 INFO  [FilterProductsPage] Selection sub-category
+2025-12-22 20:56:29 INFO  [LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-22 20:56:33 INFO  [LoginPage] Entering email: [[ChromeDriver: chrome on windows (4c1184c6067ea0f7872c00b0f01586ac)] -> xpath: //form[@action='/login']//input[@type='email']]
+2025-12-22 20:56:38 INFO  [LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-22 20:56:39 INFO  [LoginPage] Entering password: [[ChromeDriver: chrome on windows (4c1184c6067ea0f7872c00b0f01586ac)] -> xpath: //div[@class='login-form']//input[@type='password']]
+2025-12-22 20:56:39 INFO  [LoginPage] Clicking Login button
+2025-12-22 20:56:43 INFO  [LoginPage] Entering email: [[ChromeDriver: chrome on windows (4dab1ffade2f0eb4f6c5ca9abbc89c90)] -> xpath: //form[@action='/login']//input[@type='email']]
+2025-12-22 20:56:43 INFO  [LoginPage] Entering password: [[ChromeDriver: chrome on windows (4dab1ffade2f0eb4f6c5ca9abbc89c90)] -> xpath: //div[@class='login-form']//input[@type='password']]
+2025-12-22 20:56:43 INFO  [LoginPage] Clicking Login button
+2025-12-22 20:57:45 INFO  [FilterProductsPage] Selecting Main CategoryWomen
+2025-12-22 20:57:45 INFO  [FilterProductsPage] Selection sub-category
+2025-12-22 20:57:56 INFO  [FilterProductsPage] Selecting Main CategoryWomen
+2025-12-22 20:57:56 INFO  [FilterProductsPage] Selection sub-category
+2025-12-22 22:07:53 INFO  [LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-22 22:07:56 INFO  [LoginPage] Entering email: [[ChromeDriver: chrome on windows (0fb7a7fb4fbd2efeaa3f6df0fe2dc942)] -> xpath: //form[@action='/login']//input[@type='email']]
+2025-12-22 22:07:57 INFO  [LoginPage] Entering password: [[ChromeDriver: chrome on windows (0fb7a7fb4fbd2efeaa3f6df0fe2dc942)] -> xpath: //div[@class='login-form']//input[@type='password']]
+2025-12-22 22:07:57 INFO  [LoginPage] Clicking Login button
+2025-12-22 22:08:07 INFO  [FilterProductsPage] Selecting Main CategoryWomen
+2025-12-22 22:08:08 INFO  [FilterProductsPage] Selection sub-category

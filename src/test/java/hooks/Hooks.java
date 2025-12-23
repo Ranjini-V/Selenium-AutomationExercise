@@ -10,7 +10,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
 import pageObjects.BasePage;
-import pageObjects.LoginPage;
+import pageObjects.a_LoginPage;
 import utilities.ConfigReader;
 
 public class Hooks {
@@ -39,7 +39,7 @@ public class Hooks {
 
 	@Before("@loggedIn")
 	public void loginScenario() {
-		LoginPage loginPage = new LoginPage(driver);
+		a_LoginPage loginPage = new a_LoginPage(driver);
 		loginPage.navigateTo();
 		loginPage.enterEmail(ConfigReader.getProperty("validEmail"));
 		loginPage.enterPassword(ConfigReader.getProperty("validPassword"));

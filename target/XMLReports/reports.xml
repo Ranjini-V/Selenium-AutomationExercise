@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="324.72" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Filter products on home page" name="Filter products by selecting Women -&gt; Tops category" time="324.038">
+<testsuite name="Cucumber" time="33.721" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Filter products on home page" name="Filter products by selecting Women -&gt; Tops category" time="33.205">
 <system-out><![CDATA[
 Given user is on the home page..............................................passed
 When user selects "Women" category..........................................passed
