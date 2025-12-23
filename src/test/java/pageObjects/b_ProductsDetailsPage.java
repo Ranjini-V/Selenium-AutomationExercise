@@ -22,6 +22,9 @@ public class b_ProductsDetailsPage extends BasePage {
 	@FindBy(xpath = "//div[@class='product-image-wrapper'][.//p[text()='Premium Polo T-Shirts']]//a[normalize-space()='View Product']")
 	WebElement viewProductOption;
 
+	@FindBy(xpath = "//div[@class='product-information']//h2")
+	WebElement productName;
+
 	@FindBy(xpath = "//div[@class='product-information']//*[contains(text(), 'Category')]")
 	WebElement productCategory;
 
@@ -36,5 +39,23 @@ public class b_ProductsDetailsPage extends BasePage {
 
 	@FindBy(xpath = "//div[@class='product-information']//*[contains(text(), 'Brand:')]")
 	WebElement productBrand;
+
+	public boolean isProductVisible() {
+		return isDisplayed(poloTshirt);
+	}
+
+	public void clickViewProduct() {
+		click(viewProductOption);
+	}
+
+	public boolean areProductDetailsVisible() {
+		return isDisplayed(productName)
+				&& isDisplayed(productName)
+				&& isDisplayed(productCategory)
+				&& isDisplayed(productPrice)
+				&& isDisplayed(productAvailability)
+				&& isDisplayed(productCondition)
+				&& isDisplayed(productBrand);
+	}
 
 }
