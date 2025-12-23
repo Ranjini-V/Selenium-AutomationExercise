@@ -1,57 +1,65 @@
 package stepDefinitions;
 
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import hooks.Hooks;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageObjects.b_HomePage;
+import pageObjects.b_ProductsDetailsPage;
+import pageObjects.b_ProductsPage;
 
 public class b_AllProductsPage {
 
+	WebDriver driver = Hooks.driver;
+	b_HomePage homePage;
+	b_ProductsPage productsPage;
+	b_ProductsDetailsPage productDetailsPage;
+
 	@Given("user navigates to home page")
 	public void user_navigates_to_home_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		homePage = new b_HomePage(Hooks.driver);
+
 	}
 
-	@Given("home page is visible")
+	@And("home page is visible")
 	public void home_page_is_visible() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		Assert.assertTrue(homePage.isHomePageVisible());
 	}
 
 	@When("user clicks on Products button")
 	public void user_clicks_on_products_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		homePage.clickProducts();
 	}
 
 	@Then("user should be navigated to All Products Page")
 	public void user_should_be_navigated_to_all_products_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		productsPage.isAllProductsVisible();
+
 	}
 
-	@Then("products list should be visible")
+	@And("products list should be visible")
 	public void products_list_should_be_visible() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		productsPage.isProductsListVisible();
 	}
 
 	@When("user clicks on View Products of {string} product")
 	public void user_clicks_on_view_products_of_product(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		productDetailsPage.clickViewProduct();
+
 	}
 
 	@Then("product detail page should be displayed")
 	public void product_detail_page_should_be_displayed() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		productDetailsPage.isProductDetailPageVisible();
 	}
 
-	@Then("product details should be visible")
+	@And("product details should be visible")
 	public void product_details_should_be_visible() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		productDetailsPage.areProductDetailsVisible();
 	}
 
 }

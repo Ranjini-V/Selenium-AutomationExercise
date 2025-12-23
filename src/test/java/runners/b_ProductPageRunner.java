@@ -5,11 +5,11 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/feature/a_login.feature", glue = { "stepDefinitions", "hooks" }, plugin = { "pretty",
+@CucumberOptions(features = "src/test/resources/feature/b_view_product_details.feature", glue = { "stepDefinitions", "hooks" }, plugin = { "pretty",
 		"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 		"html:target/HTMLReports/report.html",
 		"json:target/JSONReports/report.json",
 		"junit:target/XMLReports/reports.xml" }, monochrome = true, tags = "@smoketest")
-public class a_LoginRunner {
+public class b_ProductPageRunner {
 
 }

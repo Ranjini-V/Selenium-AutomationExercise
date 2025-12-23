@@ -1,3 +1,4 @@
+@smoketest
 Feature: View product details
 
   @loggedIn

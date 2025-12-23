@@ -22,6 +22,9 @@ public class b_ProductsDetailsPage extends BasePage {
 	@FindBy(xpath = "//div[@class='product-image-wrapper'][.//p[text()='Premium Polo T-Shirts']]//a[normalize-space()='View Product']")
 	WebElement viewProductOption;
 
+	@FindBy(xpath = "//div[@class='product-information']")
+	WebElement productPage;
+
 	@FindBy(xpath = "//div[@class='product-information']//h2")
 	WebElement productName;
 
@@ -46,6 +49,10 @@ public class b_ProductsDetailsPage extends BasePage {
 
 	public void clickViewProduct() {
 		click(viewProductOption);
+	}
+
+	public boolean isProductDetailPageVisible() {
+		return isDisplayed(productPage);
 	}
 
 	public boolean areProductDetailsVisible() {

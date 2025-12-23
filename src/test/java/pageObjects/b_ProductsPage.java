@@ -20,8 +20,8 @@ public class b_ProductsPage extends BasePage {
 	@FindBy(xpath = "//div[@class='productinfo text-center']")
 	List<WebElement> allProductsList;
 
-	@FindBy(xpath = "(//a[contains(text(), 'View Product')])[1]")
-	WebElement firstViewProduct;
+//	@FindBy(xpath = "(//a[contains(text(), 'View Product')])[1]")
+//	WebElement firstViewProduct;
 
 	public boolean isAllProductsVisible() {
 		return isDisplayed(allProductsHeader);
@@ -32,8 +32,8 @@ public class b_ProductsPage extends BasePage {
 		return allProductsList.size() > 0;
 	}
 
-	public void clickFirstViewProduct() {
-		click(firstViewProduct);
-	}
+//	public void clickFirstViewProduct() {
+//		click(firstViewProduct);
+//	}
 
 }

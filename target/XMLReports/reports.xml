@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="33.721" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Filter products on home page" name="Filter products by selecting Women -&gt; Tops category" time="33.205">
+<testsuite name="Cucumber" time="27.647" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="View product details" name="User views details of a product" time="27.044">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;pageObjects.b_ProductsPage.isAllProductsVisible()&quot; because &quot;this.productsPage&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "pageObjects.b_ProductsPage.isAllProductsVisible()" because "this.productsPage" is null
+	at stepDefinitions.b_AllProductsPage.user_should_be_navigated_to_all_products_page(b_AllProductsPage.java:40)
+	at ✽.user should be navigated to All Products Page(file:///C:/Users/HP/eclipse-workspace/Selenium%20-%20Framework%20Project/SeleniumFrameworkDesign/src/test/resources/feature/b_view_product_details.feature:9)
+]]>
+</failure>
 <system-out><![CDATA[
-Given user is on the home page..............................................passed
-When user selects "Women" category..........................................passed
-And user selects "Tops" subcategory.........................................passed
-Then women's tops products should be displayed..............................passed
+Given user navigates to home page...........................................passed
+And home page is visible....................................................passed
+When user clicks on Products button.........................................passed
+Then user should be navigated to All Products Page..........................failed
+And products list should be visible.........................................skipped
+When user clicks on View Products of "Premium Polo T-Shirts" product........skipped
+Then product detail page should be displayed................................skipped
+And product details should be visible.......................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>
