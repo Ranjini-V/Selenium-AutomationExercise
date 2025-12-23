@@ -37,7 +37,9 @@ public class b_AllProductsPage {
 
 	@Then("user should be navigated to All Products Page")
 	public void user_should_be_navigated_to_all_products_page() {
+		productsPage = new b_ProductsPage(Hooks.driver);
 		productsPage.isAllProductsVisible();
+		Assert.assertTrue(productsPage.isOnProductsPage());
 
 	}
 
@@ -47,8 +49,10 @@ public class b_AllProductsPage {
 	}
 
 	@When("user clicks on View Products of {string} product")
-	public void user_clicks_on_view_products_of_product(String string) {
-		productDetailsPage.clickViewProduct();
+	public void user_clicks_on_view_products_of_product(String productName) {
+		productDetailsPage = new b_ProductsDetailsPage(Hooks.driver);
+		productDetailsPage.clickViewProductByName(productName);
+		
 
 	}
 

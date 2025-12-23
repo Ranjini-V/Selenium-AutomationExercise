@@ -23,6 +23,10 @@ public class b_ProductsPage extends BasePage {
 //	@FindBy(xpath = "(//a[contains(text(), 'View Product')])[1]")
 //	WebElement firstViewProduct;
 
+	public boolean isOnProductsPage() {
+	    return isDisplayed(allProductsHeader);
+	}
+	
 	public boolean isAllProductsVisible() {
 		return isDisplayed(allProductsHeader);
 

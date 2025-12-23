@@ -17,7 +17,7 @@ public class Hooks {
 
 	public static WebDriver driver;
 
-	@Before
+	@Before(order = 0)
 	public void setUp(Scenario scenario) {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -37,7 +37,7 @@ public class Hooks {
 		}
 	}
 
-	@Before("@loggedIn")
+	@Before(value = "@loggedIn", order = 1)
 	public void loginScenario() {
 		a_LoginPage loginPage = new a_LoginPage(driver);
 		loginPage.navigateTo();
