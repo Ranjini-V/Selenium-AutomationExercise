@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +20,9 @@ public class b_ProductsDetailsPage extends BasePage {
 	// xpath = "//div[@class='productinfo text-center'][.//p[text()='Premium Polo
 	// T-Shirts']]/ancestor::div[@class='product-image-wrapper']//div[@class='choose']//a[text()='View
 	// Product']"
+//	@FindBy(xpath = "//div[@class='product-image-wrapper'][.//p[text()='\"+productName+\"']]//a[normalize-space()='View Product']")
+//	WebElement viewProductOption;
+	
 	@FindBy(xpath = "//div[@class='product-image-wrapper'][.//p[text()='\"+productName+\"']]//a[normalize-space()='View Product']")
 	WebElement viewProductOption;
 
@@ -42,6 +46,12 @@ public class b_ProductsDetailsPage extends BasePage {
 
 	@FindBy(xpath = "//div[@class='product-information']//*[contains(text(), 'Brand:')]")
 	WebElement productBrand;
+	
+	public void clickViewProduct(String productName) {
+		String xpath = "//div[@class='product-image-wrapper'][.//p[text()='" + productName + "      " ;
+		WebElement viewProduct = driver.findElement(By.xpath(xpath));
+		click(viewProduct); 
+	}
 
 	public boolean isProductVisible() {
 		return isDisplayed(poloTshirt);
