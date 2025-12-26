@@ -2,6 +2,8 @@ package pageObjects;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,7 +25,7 @@ public class BasePage {
 	}
 
 	protected void click(WebElement element) {
-		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+		safeClick(element);
 	}
 
 	protected void type(WebElement element, String text) {
@@ -53,6 +55,26 @@ public class BasePage {
 	protected void hover(WebElement element) {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).perform();
+	}
+
+	protected void safeClick(WebElement element) {
+		try {
+			// scroll element to centre of the screen
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'centre'});", element);
+
+			// try normal click
+			wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+
+		} catch (ElementClickInterceptedException e) {
+			// use JS click if something overlays the elements (ads etc.,)
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+		}
+	}
+
+	// for dynamic locators
+	protected void safeClick(By locator) {
+		WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		safeClick(element);
 	}
 
 }

@@ -1,10 +1,14 @@
 package pageObjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class b_ProductsDetailsPage extends BasePage {
 
@@ -14,6 +18,8 @@ public class b_ProductsDetailsPage extends BasePage {
 
 	}
 
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 	@FindBy(xpath = "//p[contains(text(), 'Premium Polo T-Shirts')]")
 	WebElement poloTshirt;
 
@@ -22,7 +28,7 @@ public class b_ProductsDetailsPage extends BasePage {
 	// Product']"
 //	@FindBy(xpath = "//div[@class='product-image-wrapper'][.//p[text()='\"+productName+\"']]//a[normalize-space()='View Product']")
 //	WebElement viewProductOption;
-	
+
 	@FindBy(xpath = "//div[@class='product-image-wrapper'][.//p[text()='\"+productName+\"']]//a[normalize-space()='View Product']")
 	WebElement viewProductOption;
 
@@ -46,19 +52,22 @@ public class b_ProductsDetailsPage extends BasePage {
 
 	@FindBy(xpath = "//div[@class='product-information']//*[contains(text(), 'Brand:')]")
 	WebElement productBrand;
-	
-	public void clickViewProduct(String productName) {
-		String xpath = "//div[@class='product-image-wrapper'][.//p[text()='" + productName + "      " ;
-		WebElement viewProduct = driver.findElement(By.xpath(xpath));
-		click(viewProduct); 
-	}
 
 	public boolean isProductVisible() {
 		return isDisplayed(poloTshirt);
 	}
 
 	public void clickViewProductByName(String productName) {
-	    click(viewProductOption);
+
+		String xpath = "//div[contains(@class,'product-image-wrapper')]" +
+				"[.//p[normalize-space()='" + productName + "']]" +
+				"//a[normalize-space()='View Product']";
+
+		By viewProductBy = By.xpath(xpath);
+
+		WebElement viewProduct = wait.until(ExpectedConditions.elementToBeClickable(viewProductBy));
+
+		viewProduct.click();
 	}
 
 	public boolean isProductDetailPageVisible() {

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="43.962" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="View product details" name="User views details of a product" time="43.4">
+<testsuite name="Cucumber" time="67.421" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="View product details" name="User views details of a product" time="66.423">
 <failure type="java.lang.AssertionError" message="expected [true] but found [false]">
 <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertTrue(Assert.java:57)
 	at org.testng.Assert.assertTrue(Assert.java:67)
-	at stepDefinitions.b_AllProductsPage.user_should_be_navigated_to_all_products_page(b_AllProductsPage.java:42)
+	at stepDefinitions.b_AllProductsPage.user_should_be_navigated_to_all_products_page(b_AllProductsPage.java:43)
 	at ✽.user should be navigated to All Products Page(file:///C:/Users/HP/eclipse-workspace/Selenium%20-%20Framework%20Project/SeleniumFrameworkDesign/src/test/resources/feature/b_view_product_details.feature:9)
 ]]>
 </failure>

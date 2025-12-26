@@ -14,6 +14,9 @@ public class b_ProductsPage extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 
+	@FindBy(xpath = "//a[@href='/products']")
+	WebElement productsOption;
+
 	@FindBy(xpath = "//h2[contains(text(), 'All Products')]")
 	WebElement allProductsHeader;
 
@@ -23,10 +26,14 @@ public class b_ProductsPage extends BasePage {
 //	@FindBy(xpath = "(//a[contains(text(), 'View Product')])[1]")
 //	WebElement firstViewProduct;
 
-	public boolean isOnProductsPage() {
-	    return isDisplayed(allProductsHeader);
+	public void clickProductsOption() {
+		click(productsOption);
 	}
-	
+
+	public boolean isOnProductsPage() {
+		return isDisplayed(allProductsHeader);
+	}
+
 	public boolean isAllProductsVisible() {
 		return isDisplayed(allProductsHeader);
 

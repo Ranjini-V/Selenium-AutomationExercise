@@ -77,3 +77,36 @@
 2025-12-23 23:58:00 INFO  [a_LoginPage] Entering email: [[ChromeDriver: chrome on windows (9806d93d9559e1711ae8335bf2fc06be)] -> xpath: //form[@action='/login']//input[@type='email']]
 2025-12-23 23:58:02 INFO  [a_LoginPage] Entering password: [[ChromeDriver: chrome on windows (9806d93d9559e1711ae8335bf2fc06be)] -> xpath: //div[@class='login-form']//input[@type='password']]
 2025-12-23 23:58:02 INFO  [a_LoginPage] Clicking Login button
+2025-12-26 15:12:04 INFO  [a_LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-26 15:12:06 INFO  [a_LoginPage] Entering email: [[ChromeDriver: chrome on windows (600050ffb99993c4f8ac6a44f6039581)] -> xpath: //form[@action='/login']//input[@type='email']]
+2025-12-26 15:12:07 INFO  [a_LoginPage] Entering password: [[ChromeDriver: chrome on windows (600050ffb99993c4f8ac6a44f6039581)] -> xpath: //div[@class='login-form']//input[@type='password']]
+2025-12-26 15:12:08 INFO  [a_LoginPage] Clicking Login button
+2025-12-26 15:12:19 INFO  [a_LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-26 15:12:24 INFO  [a_LoginPage] Entering email: [[ChromeDriver: chrome on windows (edce77812d5dccca3d366ee70ce3ad06)] -> xpath: //form[@action='/login']//input[@type='email']]
+2025-12-26 15:12:24 INFO  [a_LoginPage] Entering password: [[ChromeDriver: chrome on windows (edce77812d5dccca3d366ee70ce3ad06)] -> xpath: //div[@class='login-form']//input[@type='password']]
+2025-12-26 15:12:24 INFO  [a_LoginPage] Clicking Login button
+2025-12-26 15:12:55 INFO  [a_LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-26 15:13:04 INFO  [a_LoginPage] Entering email: [[ChromeDriver: chrome on windows (da06e7efda43cbb1daa982b694703278)] -> xpath: //form[@action='/login']//input[@type='email']]
+2025-12-26 15:13:06 INFO  [a_LoginPage] Entering password: [[ChromeDriver: chrome on windows (da06e7efda43cbb1daa982b694703278)] -> xpath: //div[@class='login-form']//input[@type='password']]
+2025-12-26 15:13:06 INFO  [a_LoginPage] Clicking Login button
+2025-12-26 15:26:26 INFO  [a_LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-26 15:26:29 INFO  [a_LoginPage] Entering email: [[ChromeDriver: chrome on windows (540a1528335a18f9b0de1161a2037af8)] -> xpath: //form[@action='/login']//input[@type='email']]
+2025-12-26 15:26:30 INFO  [a_LoginPage] Entering password: [[ChromeDriver: chrome on windows (540a1528335a18f9b0de1161a2037af8)] -> xpath: //div[@class='login-form']//input[@type='password']]
+2025-12-26 15:26:31 INFO  [a_LoginPage] Clicking Login button
+2025-12-26 15:27:16 INFO  [a_LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-26 15:27:19 INFO  [a_LoginPage] Entering email: [[ChromeDriver: chrome on windows (d4e1d2c94f56938681e2a5830a47c38f)] -> xpath: //form[@action='/login']//input[@type='email']]
+2025-12-26 15:27:21 INFO  [a_LoginPage] Entering password: [[ChromeDriver: chrome on windows (d4e1d2c94f56938681e2a5830a47c38f)] -> xpath: //div[@class='login-form']//input[@type='password']]
+2025-12-26 15:27:21 INFO  [a_LoginPage] Clicking Login button
+2025-12-26 15:36:36 INFO  [a_LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-26 15:37:01 INFO  [a_LoginPage] Entering email: [[ChromeDriver: chrome on windows (11ecf0d8a8c114ee118214cff9345f3a)] -> xpath: //form[@action='/login']//input[@type='email']]
+2025-12-26 15:37:02 INFO  [a_LoginPage] Entering password: [[ChromeDriver: chrome on windows (11ecf0d8a8c114ee118214cff9345f3a)] -> xpath: //div[@class='login-form']//input[@type='password']]
+2025-12-26 15:37:02 INFO  [a_LoginPage] Clicking Login button
+2025-12-26 15:42:34 INFO  [a_LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-26 15:53:35 INFO  [a_LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-26 15:53:38 INFO  [a_LoginPage] Entering email: [[ChromeDriver: chrome on windows (78a2ad20919126af0824e2058b66b82c)] -> xpath: //form[@action='/login']//input[@type='email']]
+2025-12-26 15:53:39 INFO  [a_LoginPage] Entering password: [[ChromeDriver: chrome on windows (78a2ad20919126af0824e2058b66b82c)] -> xpath: //div[@class='login-form']//input[@type='password']]
+2025-12-26 15:53:39 INFO  [a_LoginPage] Clicking Login button
+2025-12-26 16:54:09 INFO  [a_LoginPage] Navigating to Login Page: https://automationexercise.com/login
+2025-12-26 16:54:14 INFO  [a_LoginPage] Entering email: [[ChromeDriver: chrome on windows (5fb59bd7b82b390fe7183e1344e31e76)] -> xpath: //form[@action='/login']//input[@type='email']]
+2025-12-26 16:54:14 INFO  [a_LoginPage] Entering password: [[ChromeDriver: chrome on windows (5fb59bd7b82b390fe7183e1344e31e76)] -> xpath: //div[@class='login-form']//input[@type='password']]
+2025-12-26 16:54:15 INFO  [a_LoginPage] Clicking Login button
