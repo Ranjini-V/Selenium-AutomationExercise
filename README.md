@@ -24,7 +24,7 @@ Hands-on Selenium WebDriver automation framework targeting **AutomationExercise.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Selenium-AutomationExercise/
@@ -52,7 +52,7 @@ Selenium-AutomationExercise/
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 ### Prerequisites
 - Java JDK 11+
